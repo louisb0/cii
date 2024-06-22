@@ -1,2 +1,2 @@
 # cii
-Following C Interfaces and Implmentations to learn C API design.
+Following C Interfaces and Implementations to learn C API design.

@@ -1,4 +1,5 @@
 #include "../include/stack.h"
+#include <signal.h>
 #include <criterion/criterion.h>
 
 Test(stack, stack_create) {
@@ -28,4 +29,10 @@ Test(stack, stack_free) {
   stack_free(&s);
 
   cr_assert_null(s);
+}
+
+Test(stack, stack_out_of_bounds, .signal = SIGABRT) {
+  Stack s = stack_create();
+
+  stack_pop(s);
 }

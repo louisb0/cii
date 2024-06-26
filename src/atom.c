@@ -68,7 +68,6 @@ const char *atom_int(long n) {
   char *s = str + sizeof(str);
   unsigned long m;
 
-  // -2^(n-1) <= n <= 2^(n-1) - 1
   if (n == LONG_MIN) {
     m = LONG_MAX + 1UL;
   } else if (n < 0) {
